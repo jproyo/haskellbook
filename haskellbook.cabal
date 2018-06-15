@@ -1,0 +1,70 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e2a65f6f793d8343810c8993b94158df2d8fc4b1168db0009a5fa42a6fdf1084
+
+name:           haskellbook
+version:        0.1.0.0
+category:       Excercise
+homepage:       https://github.com/jproyo/haskellbook#readme
+author:         Juan Pablo Royo Sales
+maintainer:     juanpablo.royo@gmail.com
+copyright:      2018 Juan Pablo Royo Sales
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    README.md
+
+library
+  hs-source-dirs:
+      src
+  default-extensions: OverloadedStrings
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , text
+  exposed-modules:
+      Chapters.Chapter22
+      Chapters.Chapter7
+  other-modules:
+      Paths_haskellbook
+  default-language: Haskell2010
+
+executable haskellbook
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+      src
+  default-extensions: OverloadedStrings
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , text
+  other-modules:
+      Chapters.Chapter22
+      Chapters.Chapter7
+      Paths_haskellbook
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      src
+      test
+  default-extensions: OverloadedStrings
+  ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , hspec
+    , text
+  other-modules:
+      Chapters.Chapter22
+      Chapters.Chapter7
+      Paths_haskellbook
+  default-language: Haskell2010
