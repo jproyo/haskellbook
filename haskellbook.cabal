@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 97256044ec2badd10f14316e3ee2276839cbe2cb2eefbdf5fa357c5aabd72e46
+-- hash: 5f8fe3ae0c2dd02b52fdc5a57c979cd74e2acbdef8b57407de2384747f759b12
 
 name:           haskellbook
 version:        0.1.0.0
@@ -31,6 +31,8 @@ library
       Chapters.Chapter22
       Chapters.Chapter7
       Chapters.Chapter8
+      Chapters.Chapter9
+      Chapters.Cipher
   other-modules:
       Paths_haskellbook
   default-language: Haskell2010
@@ -49,6 +51,8 @@ executable haskellbook
       Chapters.Chapter22
       Chapters.Chapter7
       Chapters.Chapter8
+      Chapters.Chapter9
+      Chapters.Cipher
       Paths_haskellbook
   default-language: Haskell2010
 
@@ -69,5 +73,7 @@ test-suite spec
       Chapters.Chapter22
       Chapters.Chapter7
       Chapters.Chapter8
+      Chapters.Chapter9
+      Chapters.Cipher
       Paths_haskellbook
   default-language: Haskell2010

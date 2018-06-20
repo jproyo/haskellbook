@@ -32,4 +32,4 @@ digits = generate []
           generate acc x = generate (mod x 10:acc) (div x 10)
 
 wordNumber :: Int -> String
-wordNumber n = intercalate "-" $ map digitToWord (digits n)
+wordNumber n = intercalate "-" . map digitToWord $ digits n
