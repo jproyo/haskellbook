@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5f8fe3ae0c2dd02b52fdc5a57c979cd74e2acbdef8b57407de2384747f759b12
+-- hash: 5e2049dbf814de9a8522c2056a3441ebc6754d72ed7595f22f2e0073010a2df5
 
 name:           haskellbook
 version:        0.1.0.0
@@ -28,6 +28,8 @@ library
       base >=4.7 && <5
     , text
   exposed-modules:
+      Chapters.Chapter10
+      Chapters.Chapter13
       Chapters.Chapter22
       Chapters.Chapter7
       Chapters.Chapter8
@@ -48,6 +50,8 @@ executable haskellbook
       base >=4.7 && <5
     , text
   other-modules:
+      Chapters.Chapter10
+      Chapters.Chapter13
       Chapters.Chapter22
       Chapters.Chapter7
       Chapters.Chapter8
@@ -70,6 +74,8 @@ test-suite spec
     , hspec
     , text
   other-modules:
+      Chapters.Chapter10
+      Chapters.Chapter13
       Chapters.Chapter22
       Chapters.Chapter7
       Chapters.Chapter8
