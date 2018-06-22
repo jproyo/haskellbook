@@ -1,7 +1,5 @@
 module Chapters.Chapter8 where
 
-import           Data.List (intercalate)
-
 sumNum :: (Eq a, Num a) => a -> a
 sumNum = sumTail 0
     where sumTail acc 0 = acc
@@ -19,17 +17,3 @@ mc91 :: (Integral a) => a -> a
 mc91 n
     | n > 100   = n - 10
     | otherwise = mc91 (mc91 (n+11))
-
-digitWords :: [String]
-digitWords = ["cero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-
-digitToWord :: Int -> String
-digitToWord n = digitWords !! n
-
-digits :: Int -> [Int]
-digits = generate []
-    where generate acc 0 = acc
-          generate acc x = generate (mod x 10:acc) (div x 10)
-
-wordNumber :: Int -> String
-wordNumber n = intercalate "-" . map digitToWord $ digits n
