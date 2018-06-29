@@ -44,5 +44,5 @@ tests:
       - src
       - test
     dependencies:
-      - hspec
+      - hspec == 2.*
       - QuickCheck

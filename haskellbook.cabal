@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2b8f8db90f205e3b5b3f904784eeb113b3c8098c7bf66a4bc4506a8151b1d232
+-- hash: 08950ab8ceb44393f5ac3edf346ccc2f1439963badd140fce15af6c59915376e
 
 name:           haskellbook
 version:        0.1.0.0
@@ -73,7 +73,7 @@ test-suite spec
   build-depends:
       QuickCheck
     , base >=4.7 && <5
-    , hspec
+    , hspec ==2.*
     , text
   other-modules:
       Chapters.Chapter10
@@ -84,6 +84,7 @@ test-suite spec
       Chapters.Chapter9
       Chapters.Cipher
       Chapters.WordNumber
+      Chapters.Chapter14Spec
       Chapters.WordNumberSpec
       Paths_haskellbook
   default-language: Haskell2010
