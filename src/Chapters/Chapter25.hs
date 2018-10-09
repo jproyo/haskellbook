@@ -1,5 +1,7 @@
 {-# LANGUAGE InstanceSigs        #-}
 {-# LANGUAGE ScopedTypeVariables #-}
+{-# LANGUAGE TupleSections       #-}
+
 
 module Chapters.Chapter25 where
 
