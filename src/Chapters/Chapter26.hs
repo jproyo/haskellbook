@@ -50,3 +50,17 @@ instance (Monad m) => Monad (StateT s m) where
     (StateT sma) >>= f = StateT $ \s -> do
         (ar, s') <- sma s
         runStateT (f ar) s'
+
+
+
+class MonadTrans t where
+    lift :: (Monad m) => m a -> t m a
+
+instance MonadTrans (EitherT e) where
+    lift = EitherT . fmap Right
+
+
+instance MonadTrans (StateT s) where
+    lift m = StateT $ \s -> do
+        a <- m
+        return (a, s)
