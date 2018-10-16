@@ -5,8 +5,6 @@
 
 module Chapters.Chapter26 where
 
-import           Control.Monad.Trans.Reader
-
 newtype EitherT e m a = EitherT { runEitherT :: m (Either e a) }
 
 newtype MaybeT m a = MaybeT { runMaybeT :: m (Maybe a) }
@@ -97,7 +95,3 @@ instance (MonadIO m) => MonadIO (MaybeT m) where
 
 instance (MonadIO m) => MonadIO (StateT s m) where
     liftIO = lift . liftIO
-
-
-rDec :: Num a => Reader a a
-rDec = asks (\a -> a - 1)
