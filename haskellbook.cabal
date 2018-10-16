@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d42d9de62fd4609ddd8fe382bdc942793847efb0c7deb67d857a648508eccfa4
+-- hash: e22a13ce8cc7f613dc08789880fbdedb6919406e47bb9b37d32de630f26c8a95
 
 name:           haskellbook
 version:        0.1.0.0
@@ -26,6 +26,8 @@ library
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , containers
+    , scotty
     , text
     , transformers
   exposed-modules:
@@ -36,6 +38,7 @@ library
       Chapters.Chapter26
       Chapters.Chapter26OuterInner
       Chapters.Chapter26Reader
+      Chapters.Chapter26Scotty
       Chapters.Chapter7
       Chapters.Chapter8
       Chapters.Chapter9
@@ -54,6 +57,8 @@ executable haskellbook
   ghc-options: -Wall -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , containers
+    , scotty
     , text
     , transformers
   other-modules:
@@ -64,6 +69,7 @@ executable haskellbook
       Chapters.Chapter26
       Chapters.Chapter26OuterInner
       Chapters.Chapter26Reader
+      Chapters.Chapter26Scotty
       Chapters.Chapter7
       Chapters.Chapter8
       Chapters.Chapter9
@@ -83,7 +89,9 @@ test-suite spec
   build-depends:
       QuickCheck
     , base >=4.7 && <5
+    , containers
     , hspec ==2.*
+    , scotty
     , text
     , transformers
   other-modules:
@@ -94,6 +102,7 @@ test-suite spec
       Chapters.Chapter26
       Chapters.Chapter26OuterInner
       Chapters.Chapter26Reader
+      Chapters.Chapter26Scotty
       Chapters.Chapter7
       Chapters.Chapter8
       Chapters.Chapter9
